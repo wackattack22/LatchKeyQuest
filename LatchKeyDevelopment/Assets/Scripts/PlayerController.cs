@@ -326,7 +326,7 @@ public class PlayerController : MonoBehaviour
 			if (((!isBlocking || shieldDeployed) && !isThrowing) && !isRolling) {
 				GetComponent<Rigidbody2D> ().MovePosition (GetComponent<Rigidbody2D> ().position + playerMovement * moveSpeed * Time.deltaTime);
 			} else if (isRolling) {
-				GetComponent<Rigidbody2D> ().MovePosition (GetComponent<Rigidbody2D> ().position + playerMovement * (moveSpeed * 1.4f) * Time.deltaTime);
+				GetComponent<Rigidbody2D> ().MovePosition (GetComponent<Rigidbody2D> ().position + playerMovement * (moveSpeed * 1.3f) * Time.deltaTime);
 			} else if (isThrowing) {
 				GetComponent<Rigidbody2D> ().MovePosition (GetComponent<Rigidbody2D> ().position);
 			}
@@ -454,7 +454,7 @@ public class PlayerController : MonoBehaviour
 	// Kill the player and reload the level.
 	public void Kill ()
     { 
-        
+        /*
 		soundController.PlayerDeath ();
 		
 		lifeCount--;
@@ -472,7 +472,7 @@ public class PlayerController : MonoBehaviour
 
 			SceneManager.LoadScene("GameOver");
 		}
-
+        */
 	}
 
 	

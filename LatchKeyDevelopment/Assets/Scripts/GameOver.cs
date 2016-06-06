@@ -22,8 +22,7 @@ public class GameOver : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        //playerScore = PlayerController.totalScore;
-        playerScore = 501;
+        playerScore = PlayerController.totalScore;
         color = Color.white;
         currentPage = Page.PlayerScore;
         stringToEdit = "Enter Your Name Here";
