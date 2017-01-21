@@ -10,7 +10,9 @@ public class GameOver : MonoBehaviour {
 
     private int playerScore;
 
-    private string stringToEdit;
+    private string playerName;
+
+    private HSController hs;
 
     public enum Page
     {
@@ -25,7 +27,9 @@ public class GameOver : MonoBehaviour {
         playerScore = PlayerController.totalScore;
         color = Color.white;
         currentPage = Page.PlayerScore;
-        stringToEdit = "Enter Your Name Here";
+        playerName = "Enter Your Name Here";
+        
+
     }
 	
 	// Update is called once per frame
@@ -36,12 +40,13 @@ public class GameOver : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.color = color;
+        GUI.color = color; 
+
         switch (currentPage)
         {
             case Page.PlayerScore: displayText(); break;
             case Page.Quit: quitPage(); break;
-        }
+        } 
     }
 
     void displayText()
@@ -50,161 +55,61 @@ public class GameOver : MonoBehaviour {
         int height = 160;
 
         GUI.Label(new Rect((Screen.width - width) / 2, 120, width, height), "Final Score: " + playerScore, guiStyle);
-        if (highScorer())
-        {
+        
             GUI.Label(new Rect((Screen.width - width) / 2, 200, width, height), "NEW HIGH SCORE!", guiStyle);
             GUI.Box(new Rect((Screen.width - width) / 2, 400, width, height), "");
-            stringToEdit = GUI.TextField(new Rect((Screen.width - width) / 2, 400, width-20, height), stringToEdit, 20, guiStyle);
-        }
-        else
-            GUI.Label(new Rect((Screen.width - width) / 2, 200, width, height), "Bummer!", guiStyle);
+            playerName = GUI.TextField(new Rect(((Screen.width - width) / 2), 400, width-20, height), playerName, 20, guiStyle);
 
 
-        if (GUI.Button(new Rect(Screen.width - 100, Screen.height - 100, 50, 25), "Next"))
+
+        
+        if (GUI.Button(new Rect(Screen.width - 150, Screen.height - 100, 100, 50), "Next",guiStyle))
         {
+            //int temp = Random.Range(500, 1000);
+            HSController.updateOnlineHighscoreData(playerName, playerScore);    //SCORE
+            GetComponent<HSController>().startPostScores();
+            
             currentPage = Page.Quit;
-            newHighScorer();
         }
 
     }
-
-    void newHighScorer()
-    {
-        int tempNum = 0;
-        string tempString = "";
-
-        if (playerScore > PlayerPrefs.GetInt("num1Player_highscore"))
-        {
-            tempNum = PlayerPrefs.GetInt("num4Player_highscore");
-            tempString = PlayerPrefs.GetString("num4Player");
-            PlayerPrefs.SetInt("num5Player_highscore", tempNum);
-            PlayerPrefs.SetString("num5Player", tempString);
-
-            tempNum = PlayerPrefs.GetInt("num3Player_highscore");
-            tempString = PlayerPrefs.GetString("num3Player");
-            PlayerPrefs.SetInt("num4Player_highscore", tempNum);
-            PlayerPrefs.SetString("num4Player", tempString);
-
-            tempNum = PlayerPrefs.GetInt("num2Player_highscore");
-            tempString = PlayerPrefs.GetString("num2Player");
-            PlayerPrefs.SetInt("num3Player_highscore", tempNum);
-            PlayerPrefs.SetString("num3Player", tempString);
-
-            tempNum = PlayerPrefs.GetInt("num1Player_highscore");
-            tempString = PlayerPrefs.GetString("num1Player");
-            PlayerPrefs.SetInt("num2Player_highscore", tempNum);
-            PlayerPrefs.SetString("num2Player", tempString);
-
-            PlayerPrefs.SetInt("num1Player_highscore", playerScore);
-            PlayerPrefs.SetString("num1Player", stringToEdit);
-        }
-        else if (playerScore > PlayerPrefs.GetInt("num2Player_highscore"))
-        {
-
-            tempNum = PlayerPrefs.GetInt("num4Player_highscore");
-            tempString = PlayerPrefs.GetString("num4Player");
-            PlayerPrefs.SetInt("num5Player_highscore", tempNum);
-            PlayerPrefs.SetString("num5Player", tempString);
-
-            tempNum = PlayerPrefs.GetInt("num3Player_highscore");
-            tempString = PlayerPrefs.GetString("num3Player");
-            PlayerPrefs.SetInt("num4Player_highscore", tempNum);
-            PlayerPrefs.SetString("num4Player", tempString);
-
-            tempNum = PlayerPrefs.GetInt("num2Player_highscore");
-            tempString = PlayerPrefs.GetString("num2Player");
-            PlayerPrefs.SetInt("num3Player_highscore", tempNum);
-            PlayerPrefs.SetString("num3Player", tempString);
-
-            PlayerPrefs.SetInt("num2Player_highscore", playerScore);
-            PlayerPrefs.SetString("num2Player", stringToEdit);
-        }
-        else if (playerScore > PlayerPrefs.GetInt("num3Player_highscore"))
-        {
-
-            tempNum = PlayerPrefs.GetInt("num4Player_highscore");
-            tempString = PlayerPrefs.GetString("num4Player");
-            PlayerPrefs.SetInt("num5Player_highscore", tempNum);
-            PlayerPrefs.SetString("num5Player", tempString);
-
-            tempNum = PlayerPrefs.GetInt("num3Player_highscore");
-            tempString = PlayerPrefs.GetString("num3Player");
-            PlayerPrefs.SetInt("num4Player_highscore", tempNum);
-            PlayerPrefs.SetString("num4Player", tempString);
-
-            PlayerPrefs.SetInt("num3Player_highscore", playerScore);
-            PlayerPrefs.SetString("num3Player", stringToEdit);
-        }
-        else if (playerScore > PlayerPrefs.GetInt("num4Player_highscore"))
-        {
-
-            tempNum = PlayerPrefs.GetInt("num4Player_highscore");
-            tempString = PlayerPrefs.GetString("num4Player");
-            PlayerPrefs.SetInt("num5Player_highscore", tempNum);
-            PlayerPrefs.SetString("num5Player", tempString);
-
-            PlayerPrefs.SetInt("num4Player_highscore", playerScore);
-            PlayerPrefs.SetString("num4Player", stringToEdit);
-        }
-		else if (playerScore > PlayerPrefs.GetInt("num5Player_highscore"))
-        {
-            PlayerPrefs.SetInt("num5Player_highscore", playerScore);
-            PlayerPrefs.SetString("num5Player", stringToEdit);
-        }
-    }
+ 
 
     void quitPage()
-    { 
-        int num1Player_highscore = PlayerPrefs.GetInt("num1Player_highscore");
-        string num1Player = PlayerPrefs.GetString("num1Player");
-        int num2Player_highscore = PlayerPrefs.GetInt("num1Player_highscore");
-        string num2Player = PlayerPrefs.GetString("num2Player");
-        int num3Player_highscore = PlayerPrefs.GetInt("num3Player_highscore");
-        string num3Player = PlayerPrefs.GetString("num3Player");
-        int num4Player_highscore = PlayerPrefs.GetInt("num4Player_highscore");
-        string num4Player = PlayerPrefs.GetString("num4Player");
-        int num5Player_highscore = PlayerPrefs.GetInt("num5Player_highscore");
-        string num5Player = PlayerPrefs.GetString("num5Player");
-        int width = 125;
+    {
+
+
+
+        GetComponent<HSController>().startGetScores();
+        string[] scoreList = GetComponent<HSController>().GetScoreList();
+
+
+        int width = 300;
         int height = 60;
         int posy = 125;
-        int posx = (Screen.width - width) / 2;
-
-        GUI.Label(new Rect(posx, posy, width, height), "Highscores");
-        GUI.Label(new Rect(posx - width, posy + height, width, height), num1Player);
-        GUI.Label(new Rect(posx + width, posy + height, width, height), num1Player_highscore.ToString());
-        GUI.Label(new Rect(posx - width, posy + (height * 2), width, height), num2Player);
-        GUI.Label(new Rect(posx + width, posy + (height * 2), width, height), num2Player_highscore.ToString());
-        GUI.Label(new Rect(posx - width, posy + (height * 3), width, height), num3Player);
-        GUI.Label(new Rect(posx + width, posy + (height * 3), width, height), num3Player_highscore.ToString());
-        GUI.Label(new Rect(posx - width, posy + (height * 4), width, height), num4Player);
-        GUI.Label(new Rect(posx + width, posy + (height * 4), width, height), num4Player_highscore.ToString());
-        GUI.Label(new Rect(posx - width, posy + (height * 5), width, height), num5Player);
-        GUI.Label(new Rect(posx + width, posy + (height * 5), width, height), num5Player_highscore.ToString());
-
-
-        if (GUI.Button(new Rect(25, Screen.height - 100, 75, 25), "Main Menu"))
+        int posx = (Screen.width - width) / 2 ;
+        int j = 0;
+        for (int i = 1; i <= 5; i++)
         {
-            SceneManager.LoadScene("Intro Scene");
+            GUI.Label(new Rect(posx - width, posy + (height * i), width, height), i+". "+scoreList[j++],guiStyle);
+            GUI.Label(new Rect(posx + width, posy + (height * i), width, height), scoreList[j++],guiStyle);
         }
-        if (GUI.Button(new Rect(Screen.width - 100, Screen.height - 100, 75, 25), "Quit"))
+        
+        GUI.Label(new Rect(posx, posy, width, height), "Highscores", guiStyle);
+        
+        if (GUI.Button(new Rect(25, Screen.height - 100, 100, 50), "Main Menu",guiStyle))
+        {
+            GetComponent<HSController>().stopGetScores();
+            GetComponent<HSController>().stopPostScores();
+            GUILayout.EndArea();
+            SceneManager.LoadScene("Intro Scene");
+            
+        }
+        if (GUI.Button(new Rect(Screen.width - 150, Screen.height - 100, 100, 50), "Quit", guiStyle))
         {
             Application.Quit();
-        }
+        } 
     }
 
-    bool highScorer()
-    {
-        if(PlayerPrefs.HasKey("num5Player_highscore"))
-        {
-            if (playerScore > PlayerPrefs.GetInt("num5Player_highscore"))
-            {
-                return true;
-            }
-            else
-                return false;
-        }
-        else
-            return false;
-    }
+    
 }

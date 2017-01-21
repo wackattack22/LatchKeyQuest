@@ -65,14 +65,6 @@ public class PlayerController : MonoBehaviour
 
 	public bool canThrow;
 
-	public bool testThrow;
-
-	public bool testBlock;
-
-	public bool testRoll;
-
-	public bool testRespawn;
-
 	public bool shieldReturn;
 
 	public AudioClip rollSound;
@@ -325,21 +317,6 @@ public class PlayerController : MonoBehaviour
 				canBlock = false;
 			}
 		}
-
-		if (testThrow)
-		{
-			ShieldLaunch();
-		}
-		if (testBlock)
-		{
-			ShieldBlock();
-		}
-		if (testRoll)
-		{
-			isRolling = true;
-		}
-
-
 	}
 
 	void FixedUpdate ()
@@ -470,9 +447,6 @@ public class PlayerController : MonoBehaviour
 
 	void DestroySelf(){
 		Destroy (this.gameObject);
-		if (testRespawn) {
-			return;
-		}
 
 		if (lifeCount > 0)
 			SceneManager.LoadScene (currentScene);
@@ -480,7 +454,7 @@ public class PlayerController : MonoBehaviour
 		{
 			lifeCount = 7;
 			time = 0;
-			totalScore = 0;
+			totalScore += lvlScore;
 			//Game Over screen?
 			SceneManager.LoadScene("GameOver");
 		}
@@ -491,13 +465,6 @@ public class PlayerController : MonoBehaviour
 	{
         //soundController.PlayerDeath ();
         source.PlayOneShot(playerDeath, 0.5f);
-        if (testRespawn)
-		{
-			//Destroy(this.gameObject);
-			isDead = true;
-			cirCol.enabled = false;
-			return;
-		}
 
 		//transform.position = startPosition;
 		lifeCount--;

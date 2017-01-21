@@ -1,617 +1,88 @@
-Initialize engine version: 5.4.3f1 (01f4c123905a)
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
     Vendor:   NVIDIA
-    VRAM:     2017 MB
+    VRAM:     3072 MB
+    Driver:   20.19.15.4404
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.134 seconds
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Leo\Downloads\LatchKey-master\LatchKey-master\LatchKeyDevelopment\test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.024 seconds
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\LeoLaptop\Documents\LatchKeyDevelopment\test_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on Fader
 This message has been deprecated and will be removed in a later version of Unity.
 Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
  
-(Filename:  Line: 375)
+(Filename:  Line: 382)
 
 OnLevelWasLoaded was found on SceneFade
 This message has been deprecated and will be removed in a later version of Unity.
 Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
  
-(Filename:  Line: 375)
+(Filename:  Line: 382)
 
-OnLevelWasLoaded was found on GameScore
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
- 
-(Filename:  Line: 375)
-
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.664477 ms
+UnloadTime: 4.002371 ms
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.570757 ms
+UnloadTime: 0.333827 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 299.
-Total: 0.267599 ms (FindLiveObjects: 0.021998 ms CreateObjectMapping: 0.040079 ms MarkObjects: 0.188645 ms  DeleteObjects: 0.015670 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 302.
+Total: 0.231506 ms (FindLiveObjects: 0.024888 ms CreateObjectMapping: 0.024098 ms MarkObjects: 0.171456 ms  DeleteObjects: 0.009876 ms)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.239874 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4184.
-Total: 0.503556 ms (FindLiveObjects: 0.101555 ms CreateObjectMapping: 0.047613 ms MarkObjects: 0.342032 ms  DeleteObjects: 0.012054 ms)
+The referenced script on this Behaviour (Game Object 'MusicManager') is missing!
+ 
+(Filename:  Line: 1754)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.206606 ms
+UnloadTime: 0.307358 ms
 
-Unloading 68 unused Assets to reduce memory usage. Loaded Objects now: 11263.
-Total: 1.517600 ms (FindLiveObjects: 0.269708 ms CreateObjectMapping: 0.163030 ms MarkObjects: 0.822987 ms  DeleteObjects: 0.261270 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 4196.
+Total: 0.918913 ms (FindLiveObjects: 0.170271 ms CreateObjectMapping: 0.040691 ms MarkObjects: 0.679506 ms  DeleteObjects: 0.028444 ms)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.592095 ms
-
-Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 4925.
-Total: 1.101134 ms (FindLiveObjects: 0.195576 ms CreateObjectMapping: 0.100048 ms MarkObjects: 0.620178 ms  DeleteObjects: 0.184727 ms)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
+The referenced script on this Behaviour (Game Object 'MusicManager') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+(Filename:  Line: 1754)
 
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.492167 ms
-
-Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 2.065153 ms (FindLiveObjects: 0.347456 ms CreateObjectMapping: 0.114513 ms MarkObjects: 1.278930 ms  DeleteObjects: 0.313705 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.831970 ms
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 1.891274 ms (FindLiveObjects: 0.334800 ms CreateObjectMapping: 0.109390 ms MarkObjects: 1.193949 ms  DeleteObjects: 0.252531 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.243951 ms
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.876570 ms
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 1.962995 ms (FindLiveObjects: 0.344443 ms CreateObjectMapping: 0.108486 ms MarkObjects: 1.281642 ms  DeleteObjects: 0.227820 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.842517 ms
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 1.874398 ms (FindLiveObjects: 0.319732 ms CreateObjectMapping: 0.107582 ms MarkObjects: 1.190032 ms  DeleteObjects: 0.256750 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.258984 ms
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 2.193528 ms (FindLiveObjects: 0.390851 ms CreateObjectMapping: 0.111499 ms MarkObjects: 1.402183 ms  DeleteObjects: 0.288392 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.822026 ms
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 2.066057 ms (FindLiveObjects: 0.353483 ms CreateObjectMapping: 0.109992 ms MarkObjects: 1.334981 ms  DeleteObjects: 0.267297 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 4201.
+Total: 1.228247 ms (FindLiveObjects: 0.222419 ms CreateObjectMapping: 0.072296 ms MarkObjects: 0.638815 ms  DeleteObjects: 0.293926 ms)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object 'MusicManager') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1754)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.648146 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.728000 ms
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 14904.
-Total: 1.975050 ms (FindLiveObjects: 0.348059 ms CreateObjectMapping: 0.108184 ms MarkObjects: 1.280437 ms  DeleteObjects: 0.238368 ms)
+Unloading 68 unused Assets to reduce memory usage. Loaded Objects now: 11275.
+Total: 2.014420 ms (FindLiveObjects: 0.456296 ms CreateObjectMapping: 0.147753 ms MarkObjects: 1.002667 ms  DeleteObjects: 0.407308 ms)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at ShieldController.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object 'MusicManager') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1754)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 11.258145 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.276544 ms
 
-Unloading 414 unused Assets to reduce memory usage. Loaded Objects now: 312.
-Total: 2.583174 ms (FindLiveObjects: 0.056653 ms CreateObjectMapping: 0.103363 ms MarkObjects: 0.505364 ms  DeleteObjects: 1.916889 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 11275.
+Total: 2.655210 ms (FindLiveObjects: 0.612345 ms CreateObjectMapping: 0.199901 ms MarkObjects: 1.394963 ms  DeleteObjects: 0.446814 ms)
 
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 25ec -> priority: 1 
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3a8c -> priority: 1 
+  Thread -> id: 2798 -> priority: 1 

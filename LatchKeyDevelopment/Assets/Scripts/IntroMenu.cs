@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IntroMenu : MonoBehaviour {
+
+    //public GUIStyle guiStyle;
     
     private float startTime;
 
@@ -12,6 +14,8 @@ public class IntroMenu : MonoBehaviour {
     private string[] toolbarstrings = { "Audio", "Graphics", "Stats" };
 
     private Color color;
+
+    private HSController hs;
 
     public enum Page
     {
@@ -87,46 +91,31 @@ public class IntroMenu : MonoBehaviour {
 
     void showHighScore()
     {
-        //Temporary until we can link the scoring to the High Scores Menu
-        PlayerPrefs.SetString("num1Player", "Aaron Tolbert");
-        PlayerPrefs.SetInt("num1Player_highscore", 200);
-        PlayerPrefs.SetString("num2Player", "Joshua Agnes");
-        PlayerPrefs.SetInt("num2Player_highscore", 175);
-        PlayerPrefs.SetString("num3Player", "Leo Wack");
-        PlayerPrefs.SetInt("num3Player_highscore", 160);
-        PlayerPrefs.SetString("num4Player", "Paul Ross");
-        PlayerPrefs.SetInt("num4Player_highscore", 120);
-        PlayerPrefs.SetString("num5Player", "Ryan Bonisch");
-        PlayerPrefs.SetInt("num5Player_highscore", 100);
-
-        int num1Player_highscore = PlayerPrefs.GetInt("num1Player_highscore");
-        string num1Player = PlayerPrefs.GetString("num1Player");
-        int num2Player_highscore = PlayerPrefs.GetInt("num1Player_highscore");
-        string num2Player = PlayerPrefs.GetString("num2Player");
-        int num3Player_highscore = PlayerPrefs.GetInt("num3Player_highscore");
-        string num3Player = PlayerPrefs.GetString("num3Player");
-        int num4Player_highscore = PlayerPrefs.GetInt("num4Player_highscore");
-        string num4Player = PlayerPrefs.GetString("num4Player");
-        int num5Player_highscore = PlayerPrefs.GetInt("num5Player_highscore");
-        string num5Player = PlayerPrefs.GetString("num5Player");
-        int height = 25;
-        int width = 150;
         
 
         BeginPage(300, 200);
-        //Add highscore functionality
-        GUI.Label(new Rect(0, 0, width, height), "\tHighscores");
-        GUI.Label(new Rect(0, height, width, height), num1Player);
-        GUI.Label(new Rect(width, height, width, height), num1Player_highscore.ToString());
-        GUI.Label(new Rect(0, height*2, width, height), num2Player);
-        GUI.Label(new Rect(width, height*2, width, height), num2Player_highscore.ToString());
-        GUI.Label(new Rect(0, height*3, width, height), num3Player);
-        GUI.Label(new Rect(width, height*3, width, height), num3Player_highscore.ToString());
-        GUI.Label(new Rect(0, height*4, width, height), num4Player);
-        GUI.Label(new Rect(width, height*4, width, height), num4Player_highscore.ToString());
-        GUI.Label(new Rect(0, height*5, width, height), num5Player);
-        GUI.Label(new Rect(width, height*5, width, height), num5Player_highscore.ToString());
+        /*
+        GetComponent<HSController>().startGetScores();
+        string[] scoreList = HSController.GetScoreList();
+
+
+        int width = 300;
+        int height = 60;
+        int posy = 125;
+        int posx = (Screen.width - width) / 2;
+        int j = 0;
+        for (int i = 1; i <= 5; i++)
+        {
+            GUI.Label(new Rect(posx - width, posy + (height * i), width, height), i + ". " + scoreList[j++], guiStyle);
+            GUI.Label(new Rect(posx + width, posy + (height * i), width, height), scoreList[j++], guiStyle);
+        }
+
+        GUI.Label(new Rect(posx, posy, width, height), "Highscores", guiStyle);
+        */
         EndPage();
+
+    
+        
     }
 
     bool IsBeginning()
