@@ -46,7 +46,9 @@ public class ShieldController : MonoBehaviour
 
 		shieldReturner = (GameObject)Resources.Load ("Shield");
 		isColliding = false;
-	}
+        hitCounter = 0;
+
+    }
 
 	// Update is called once per frame
 	void Update ()
@@ -68,7 +70,13 @@ public class ShieldController : MonoBehaviour
 		} else if (col.gameObject.layer == 8) {
 			source.PlayOneShot (ricochetSound, 0.5f);
 		}
-	}
+        hitCounter++;
+        if (hitCounter == 5)
+        {
+            Kill();
+        }
+
+    }
 
 	void OnCollisionExit2D (Collision2D col)
 	{
@@ -102,7 +110,7 @@ public class ShieldController : MonoBehaviour
 		playerController.shieldReturn = false;
 		isColliding = false;
 		Destroy (this.gameObject);
-		//playerController.shieldCounter = 0;
+        hitCounter = 0;
 	}
 
 }
