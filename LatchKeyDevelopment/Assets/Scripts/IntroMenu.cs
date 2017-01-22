@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class IntroMenu : MonoBehaviour {
 
-    //public GUIStyle guiStyle;
+    public GUIStyle guiStyle;
+
+    public GUIStyle mainMenuStyle;
     
     private float startTime;
 
@@ -51,25 +53,25 @@ public class IntroMenu : MonoBehaviour {
 
     void mainMenu()
     {
-        int space = 5;
+        int space = 20;
 
-        BeginPage(200,200);
-        if (GUILayout.Button("Start Game"))
+        BeginPage(300,200);
+        if (GUILayout.Button("Start Game", mainMenuStyle))
         {
             SceneManager.LoadScene("Entryway");
         }
         GUILayout.Space(space);
-        if (GUILayout.Button("Options"))
+        if (GUILayout.Button("Options", mainMenuStyle))
         {
             currentPage = Page.Options;
         }
         GUILayout.Space(space);
-        if (GUILayout.Button("High Score"))
+        if (GUILayout.Button("High Score", mainMenuStyle))
         {
             currentPage = Page.HighScore;
         }
         GUILayout.Space(space);
-        if (GUILayout.Button("Quit"))
+        if (GUILayout.Button("Quit", mainMenuStyle))
         {
             Application.Quit();
         }
@@ -93,25 +95,33 @@ public class IntroMenu : MonoBehaviour {
     {
         
 
-        BeginPage(300, 200);
-        /*
+        BeginPage(300, 500);
+        
         GetComponent<HSController>().startGetScores();
-        string[] scoreList = HSController.GetScoreList();
+        string[] scoreList = GetComponent<HSController>().GetScoreList();
 
+        int height = 25;
+        int width = 150;
 
-        int width = 300;
-        int height = 60;
-        int posy = 125;
-        int posx = (Screen.width - width) / 2;
+        GUI.Label(new Rect(-320, 0, width, height), "\tHighscores", mainMenuStyle);
+       
         int j = 0;
-        for (int i = 1; i <= 5; i++)
+        int len = 10 > scoreList.Length / 2 ? scoreList.Length / 2 : 10;
+        for (int i = 1; i <= len; i++)
         {
-            GUI.Label(new Rect(posx - width, posy + (height * i), width, height), i + ". " + scoreList[j++], guiStyle);
-            GUI.Label(new Rect(posx + width, posy + (height * i), width, height), scoreList[j++], guiStyle);
+            if (i < 10)
+            {
+                GUI.Label(new Rect(0, height * (2 * i), width, height), i + ".  " + scoreList[j++], guiStyle);
+            }
+            else
+            {
+                GUI.Label(new Rect(0, height * (2 * i), width, height), i + ". " + scoreList[j++], guiStyle);
+            }
+            
+            GUI.Label(new Rect(width+150, height*(2*i), width, height), scoreList[j++], guiStyle);
         }
-
-        GUI.Label(new Rect(posx, posy, width, height), "Highscores", guiStyle);
-        */
+        
+        
         EndPage();
 
     
@@ -185,7 +195,7 @@ public class IntroMenu : MonoBehaviour {
         GUILayout.BeginArea(new Rect(
             ((Screen.width / 2) - width) / 2 + (Screen.width / 2),
             (Screen.height - height) / 2,
-            width, height));
+            width+100, height*2));
     }
 
     void EndPage()
@@ -199,7 +209,7 @@ public class IntroMenu : MonoBehaviour {
 
     void ShowBackButton()
     {
-        if (GUI.Button(new Rect(20, Screen.height - 50, 50, 20), "Back"))
+        if (GUI.Button(new Rect(20, Screen.height - 50, 100, 20), "Back", mainMenuStyle))
         {
             currentPage = Page.Main;
         }

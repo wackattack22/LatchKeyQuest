@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class PauseMenu : MonoBehaviour
 	private string[] controlInput = { "W A S D or Arrow Keys", "Hold X", "Tap X", "Z while moving" };
 
 	private GUIStyle currentStyle;
+
+    //public GUIStyle guiStyle;
 
 	void Start()
 	{
@@ -238,8 +241,8 @@ public class PauseMenu : MonoBehaviour
 		}
 		if (GUILayout.Button("Quit"))
 		{
-			Application.Quit();
-		}
+            SceneManager.LoadScene("Intro Scene");
+        }
 		EndPage();
 	}
 

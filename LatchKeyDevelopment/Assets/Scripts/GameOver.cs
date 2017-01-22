@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 public class GameOver : MonoBehaviour {
 
@@ -27,7 +28,7 @@ public class GameOver : MonoBehaviour {
         playerScore = PlayerController.totalScore;
         color = Color.white;
         currentPage = Page.PlayerScore;
-        playerName = "Enter Your Name Here";
+        playerName = "Enter Name";
         
 
     }
@@ -55,18 +56,28 @@ public class GameOver : MonoBehaviour {
         int height = 160;
 
         GUI.Label(new Rect((Screen.width - width) / 2, 120, width, height), "Final Score: " + playerScore, guiStyle);
-        
+
+        // Needs fix, has to wait for GetScores to return before condition can be evaluated
+        /*
+        if (checkHighScore(playerScore))
+        {
             GUI.Label(new Rect((Screen.width - width) / 2, 200, width, height), "NEW HIGH SCORE!", guiStyle);
             GUI.Box(new Rect((Screen.width - width) / 2, 400, width, height), "");
-            playerName = GUI.TextField(new Rect(((Screen.width - width) / 2), 400, width-20, height), playerName, 20, guiStyle);
+            playerName = GUI.TextField(new Rect(((Screen.width - width) / 2), 400, width - 20, height), playerName, 10, guiStyle);
+        }
+        else
+        {
+            GUI.Label(new Rect((Screen.width - width) / 2, 200, width, height), "Try harder next time :(", guiStyle);
+        }
+        */
+        GUI.Box(new Rect((Screen.width - width) / 2, 439, width, height/2), "");    //Box
+        playerName = GUI.TextField(new Rect(((Screen.width - width+20) / 2), 400, width - 20, height), playerName, 10, guiStyle);
 
 
-
-        
         if (GUI.Button(new Rect(Screen.width - 150, Screen.height - 100, 100, 50), "Next",guiStyle))
         {
             //int temp = Random.Range(500, 1000);
-            HSController.updateOnlineHighscoreData(playerName, playerScore);    //SCORE
+            GetComponent<HSController>().updateOnlineHighscoreData(playerName, playerScore);    //SCORE
             GetComponent<HSController>().startPostScores();
             
             currentPage = Page.Quit;
@@ -89,9 +100,10 @@ public class GameOver : MonoBehaviour {
         int posy = 125;
         int posx = (Screen.width - width) / 2 ;
         int j = 0;
-        for (int i = 1; i <= 5; i++)
+        int len = 5 > scoreList.Length / 2 ? scoreList.Length / 2 : 5;
+        for (int i = 1; i <= len; i++)
         {
-            GUI.Label(new Rect(posx - width, posy + (height * i), width, height), i+". "+scoreList[j++],guiStyle);
+            GUI.Label(new Rect(posx - width, posy + (height * i), width+20, height), i+". "+scoreList[j++],guiStyle);
             GUI.Label(new Rect(posx + width, posy + (height * i), width, height), scoreList[j++],guiStyle);
         }
         
@@ -111,5 +123,31 @@ public class GameOver : MonoBehaviour {
         } 
     }
 
-    
+    bool checkHighScore(int playerScore)
+    {
+        
+        string[] scoreList = GetComponent<HSController>().GetScoreList();
+        if (scoreList != null)
+        {
+            int[] scores = new int[5];
+            int j = 0;
+            int len = 5 > scoreList.Length / 2 ? scoreList.Length / 2 : 5;
+            for (int i = 1; i <= len; i += 2)
+            {
+                //scores[j++] = Convert.ToInt32(scoreList[i]);
+                Debug.Log(scoreList[i]);
+            }
+            foreach (int score in scores)
+            {
+                if (playerScore >= score)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        return false;
+        
+
+    }
 }

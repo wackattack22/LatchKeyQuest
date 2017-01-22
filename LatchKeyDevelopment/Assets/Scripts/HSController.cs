@@ -5,31 +5,10 @@ using UnityEngine.UI;
 
 public class HSController : MonoBehaviour
 {
-    private static HSController instance6;
-
-    public static HSController Instance
-    {
-        get { return instance6; }
-    }
-    void Awake()
-    {
-
-        DontDestroyOnLoad(gameObject);
-        // If no Player ever existed, we are it.
-        if (instance6 == null)
-            instance6 = this;
-        // If one already exist, it's because it came from another level.
-        else if (instance6 != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        
-
-    }
+    
     void Start()
     {
-        //startGetScores();
+        startGetScores();
         //startPostScores();
 
         //
@@ -41,10 +20,10 @@ public class HSController : MonoBehaviour
     string highscoreURL = "ec2-54-242-216-198.compute-1.amazonaws.com/display.php";
 
     //for testing
-    static string uniqueID;
-    static string name3;
-    static int score;
-    public static bool flag = false;
+    private string uniqueID;
+    private string name;
+    private int score;
+    
 
     private string[] onlineHighScore;
 
@@ -75,13 +54,13 @@ public class HSController : MonoBehaviour
     
 
     //set actual values before posting score
-    public static void updateOnlineHighscoreData(string name, int scores)
+    public void updateOnlineHighscoreData(string playerName, int playerScore)
     {
-        // uniqueID,name3 and score will get the actual value before posting score
+        // uniqueID, name and score will get the actual value before posting score
 
         uniqueID = Random.Range(1,10000).ToString();
-        name3 = name;
-        score = scores;
+        name = playerName;
+        score = playerScore;
         //startPostScores();
     }
 
@@ -109,14 +88,15 @@ public class HSController : MonoBehaviour
     IEnumerator PostScores()
     {
         
-            //updateOnlineHighscoreData();
+            
             //This connects to a server side php script that will add the name and score to a MySQL DB.
             // Supply it with a string representing the players name and the players score.
-            string hash = Md5Sum(name3 + score + secretKey);
-            //string post_url = addScoreURL + "name=" + WWW.EscapeURL(name) + "&score=" + score + "&hash=" + hash;
-            string post_url = addScoreURL + "uniqueID=" + uniqueID + "&name=" + WWW.EscapeURL(name3) + "&score=" + score + "&hash=" + hash;
-            //Debug.Log ("post url " + post_url);
+            string hash = Md5Sum(name + score + secretKey);
+            
+            string post_url = addScoreURL + "uniqueID=" + uniqueID + "&name=" + WWW.EscapeURL(name) + "&score=" + score + "&hash=" + hash;
+            
             // Post the URL to the site and create a download object to get the result.
+            // Do not use https!!
             WWW hs_post = new WWW("http://" + post_url);
 
             yield return hs_post; // Wait until the download is done
@@ -134,10 +114,6 @@ public class HSController : MonoBehaviour
     // remember to use StartCoroutine when calling this function!
     IEnumerator GetScores()
     {
-
-
-        //Scrolllist.Instance.loading = true;
-
         WWW hs_get = new WWW("http://" + highscoreURL);
 
         yield return hs_get;
@@ -149,7 +125,7 @@ public class HSController : MonoBehaviour
         }
         else
         {
-
+            // Gets top 10 scores
             //Change .text into string to use Substring and Split
             string help = hs_get.text;
 
@@ -160,7 +136,9 @@ public class HSController : MonoBehaviour
             
 
         }
+
         
     }
+
 
 }
