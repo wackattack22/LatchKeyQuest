@@ -97,7 +97,7 @@ public class IntroMenu : MonoBehaviour {
 
         BeginPage(300, 500);
         
-        GetComponent<HSController>().startGetScores();
+        GetComponent<HSController>().StartGetScores();
         string[] scoreList = GetComponent<HSController>().GetScoreList();
 
         int height = 25;
@@ -120,12 +120,8 @@ public class IntroMenu : MonoBehaviour {
             
             GUI.Label(new Rect(width+150, height*(2*i), width, height), scoreList[j++], guiStyle);
         }
-        
-        
-        EndPage();
-
-    
-        
+               
+        EndPage();  
     }
 
     bool IsBeginning()
