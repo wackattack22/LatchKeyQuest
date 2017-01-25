@@ -77,8 +77,8 @@ public class GameOver : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width - 150, Screen.height - 100, 100, 50), "Next",guiStyle))
         {
             //int temp = Random.Range(500, 1000);
-            GetComponent<HSController>().updateOnlineHighscoreData(playerName, playerScore);    //SCORE
-            GetComponent<HSController>().startPostScores();
+            GetComponent<HSController>().UpdateOnlineHighscoreData(playerName, playerScore);    //SCORE
+            GetComponent<HSController>().StartPostScores();
             
             currentPage = Page.Quit;
         }
@@ -91,7 +91,7 @@ public class GameOver : MonoBehaviour {
 
 
 
-        GetComponent<HSController>().startGetScores();
+        GetComponent<HSController>().StartGetScores();
         string[] scoreList = GetComponent<HSController>().GetScoreList();
 
 
@@ -111,8 +111,8 @@ public class GameOver : MonoBehaviour {
         
         if (GUI.Button(new Rect(25, Screen.height - 100, 100, 50), "Main Menu",guiStyle))
         {
-            GetComponent<HSController>().stopGetScores();
-            GetComponent<HSController>().stopPostScores();
+            GetComponent<HSController>().StopGetScores();
+            GetComponent<HSController>().StopPostScores();
             GUILayout.EndArea();
             SceneManager.LoadScene("Intro Scene");
             
@@ -135,7 +135,7 @@ public class GameOver : MonoBehaviour {
             for (int i = 1; i <= len; i += 2)
             {
                 //scores[j++] = Convert.ToInt32(scoreList[i]);
-                Debug.Log(scoreList[i]);
+                //Debug.Log(scoreList[i]);
             }
             foreach (int score in scores)
             {

@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
 
 	public Color statColor;
 
-	public string[] credits = { "Team Dungeon Masters" , "Team Lead:\tAaron Tolbert" , "Team Members:\tJoshua Agnes, Leo Wack," , "\t\tPaul Ross, Ryan Bonisch" };
+	private string[] credits = { "Team Members:","\tAaron Tolbert","\tJoshua Agnes", "\tLeo Wack", "\tPaul Ross", "\tRyan Bonisch" };
 
 	public enum Page
 	{
@@ -119,9 +119,10 @@ public class PauseMenu : MonoBehaviour
 	void ShowCredits()
 	{
 		BeginPage(300, 300);
-		foreach (string credit in credits)
+        
+        for(int i = 0;i< credits.Length;i++)
 		{
-			GUILayout.Label(credit);
+			GUILayout.Label(credits[i]);
 		}
 		EndPage();
 	}
@@ -242,6 +243,8 @@ public class PauseMenu : MonoBehaviour
 		if (GUILayout.Button("Quit"))
 		{
             SceneManager.LoadScene("Intro Scene");
+            UnPauseGame();
+            //AudioListener
         }
 		EndPage();
 	}

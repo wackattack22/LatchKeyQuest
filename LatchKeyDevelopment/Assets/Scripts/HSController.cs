@@ -8,40 +8,40 @@ public class HSController : MonoBehaviour
     
     void Start()
     {
-        startGetScores();
+        StartGetScores();
         //startPostScores();
 
-        //
-        //HSController.Instance.startGetScores ();
     }
 
-    private string secretKey = "123456789"; // Should be same as key stored on server
+    private string secretKey = "123456789";       // Should be same as key stored on server
     string addScoreURL = "ec2-54-242-216-198.compute-1.amazonaws.com/addscore.php?"; // EC2 address
     string highscoreURL = "ec2-54-242-216-198.compute-1.amazonaws.com/display.php";
 
-    //for testing
+    
     private string uniqueID;
-    private string name;
-    private int score;
+    private string playerName;
+    private int playerScore;
     
 
     private string[] onlineHighScore;
 
-    public void startGetScores()
+
+    // Use these to start and stop coroutines
+    public void StartGetScores()
     {
         StartCoroutine(GetScores());
     }
 
-    public void startPostScores()
+    public void StartPostScores()
     {
         StartCoroutine(PostScores());
     }
 
-    public void stopGetScores()
+    public void StopGetScores()
     {
         StopCoroutine(GetScores());
     }
-    public void stopPostScores()
+    public void StopPostScores()
     {
         StopCoroutine(PostScores());
     }
@@ -53,17 +53,15 @@ public class HSController : MonoBehaviour
 
     
 
-    //set actual values before posting score
-    public void updateOnlineHighscoreData(string playerName, int playerScore)
+    // set actual values before posting score
+    public void UpdateOnlineHighscoreData(string name, int score)
     {
-        // uniqueID, name and score will get the actual value before posting score
-
         uniqueID = Random.Range(1,10000).ToString();
-        name = playerName;
-        score = playerScore;
-        //startPostScores();
+        playerName = name;
+        playerScore = score;
     }
 
+    // MD5 hash to validate data
     public string Md5Sum(string strToEncrypt)
     {
         System.Text.UTF8Encoding ue = new System.Text.UTF8Encoding();
@@ -84,34 +82,30 @@ public class HSController : MonoBehaviour
         return hashString.PadLeft(32, '0');
     }
 
-    // remember to use StartCoroutine when calling this function!
+    
     IEnumerator PostScores()
-    {
-        
+    {               
+            // This connects to a server side php script that will add the name and score to a MySQL DB.
+            // updateOnlineHighScoreData() must be called prior to starting this
+            string hash = Md5Sum(playerName + playerScore + secretKey);
             
-            //This connects to a server side php script that will add the name and score to a MySQL DB.
-            // Supply it with a string representing the players name and the players score.
-            string hash = Md5Sum(name + score + secretKey);
-            
-            string post_url = addScoreURL + "uniqueID=" + uniqueID + "&name=" + WWW.EscapeURL(name) + "&score=" + score + "&hash=" + hash;
+            string post_url = addScoreURL + "uniqueID=" + uniqueID + "&name=" + WWW.EscapeURL(playerName) + "&score=" + playerScore + "&hash=" + hash;
             
             // Post the URL to the site and create a download object to get the result.
-            // Do not use https!!
+            // Do not use https!! server not configured for it
             WWW hs_post = new WWW("http://" + post_url);
 
             yield return hs_post; // Wait until the download is done
         
             if (hs_post.error != null)
             {
-                print("There was an error posting the high score: " + hs_post.error);
-            }
-            
-        
-        
+                //print("There was an error posting the high score: " + hs_post.error);
+            }  
     }
 
-    // Get the scores from the MySQL DB to display in a GUIText.
-    // remember to use StartCoroutine when calling this function!
+
+    // Get the scores from the MySQL DB, convert to string array
+    // Needs to be started in Start(), then also called when ready to display scores
     IEnumerator GetScores()
     {
         WWW hs_get = new WWW("http://" + highscoreURL);
@@ -120,25 +114,16 @@ public class HSController : MonoBehaviour
 
         if (hs_get.error != null)
         {
-            Debug.Log("There was an error getting the high score: " + hs_get.error);
+            //Debug.Log("There was an error getting the high score: " + hs_get.error);
 
         }
         else
         {
             // Gets top 10 scores
-            //Change .text into string to use Substring and Split
+            // Returns a string, split and convert to array
             string help = hs_get.text;
 
-            
-            //200 is maximum length of highscore - 100 Positions (name+score)
-
             onlineHighScore = help.Split(";"[0]);
-            
-
-        }
-
-        
+        }  
     }
-
-
 }

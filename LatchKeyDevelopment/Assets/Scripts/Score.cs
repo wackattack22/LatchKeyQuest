@@ -50,12 +50,12 @@ public class Score : MonoBehaviour {
 			}
 			if (currentScene == lvlScores.Length && PlayerController.lvlComplete)
 			{
-				Debug.Log(currentScene);
+				//Debug.Log(currentScene);
 				GUI.Label(new Rect((Screen.width / 2) + j, 10, 100, 20), "Level " + (currentScene)
 					+ ": " + lvlScores[currentScene-2].ToString(),guiStyle);
 
 				j += 150;
-
+                /*
 				string rank = "";
 
 				totalScore = PlayerController.totalScore;
@@ -72,7 +72,8 @@ public class Score : MonoBehaviour {
 				j += 20;
 				GUI.Label(new Rect(Screen.width - 150, j, 100, 20), "Total Score: " + totalScore.ToString());
 				j += 20;
-				GUI.Label(new Rect(Screen.width - 150, j, 100, 20), "Rank: " + rank);
+				GUI.Label(new Rect(Screen.width - 150, j, 100, 20), "Rank: " + rank); 
+                */
 			}
 
 		}
